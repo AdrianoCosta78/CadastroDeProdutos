@@ -23,23 +23,22 @@
 					<p>Insira seu email e senha para efetuar o login.</p>
 				</div>
 				
-				<form method="post" action="/login" th:object="${usuarios}" >
+				<form method="post" action="/login" th:object="${usuarioLogado}" >
 					
-					
-					<div th:text="${msg} class="alert alert-danger" role="alert" th:if="${msg != null}">
-<!-- 						<strong "></strong> -->
-					</div>
-				
 					<div class="form-group">
-						<input id="email" type="text" name="email"   class="form-control"   placeholder="Email">
+						<input id="email" type="text" name="email" class="form-control"   placeholder="Email">
 					</div>
 <!-- 					th:fiel="*{email}" -->
 					<div class="form-group">
-						<input id="senha" type="password" name="senha"  class="form-control"  placeholder="senha">
+						<input id="senha" type="password" name="senha" class="form-control"  placeholder="Senha">
 					</div>
 <!-- 					th:fiel="*{senha}" -->
 					<div class="cadastro">
 						<a th:href="@{cadastro}">Não tem cadastro? Clique aqui.</a>
+					</div>
+					
+					<div th:text="${mensagem}" class="alert alert-danger" role="alert" th:if="${mensagem != null}">
+<!-- 						<strong "></strong> -->
 					</div>
 					<button type="submit" class="btn btn-primary">Login</button>
 			

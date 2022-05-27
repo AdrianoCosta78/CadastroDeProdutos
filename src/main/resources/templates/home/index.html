@@ -16,20 +16,20 @@
 
 	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
 
-<section class="primeira-section" style="background-image: url('imagens/fundo.jpg');">
+<section class="primeira-section" >
 
 	<div class="sombra"></div>
 	<div class=" center primeiro-container">
-		<h1 class="texto-centro">Sistema de Gerenciamento de Alunos</h1>
+		<h1 class="texto-centro">Sistema de Gerenciamento de Estoque</h1>
 
 		<div class="botoes">
 			<div class="wm">
-				<h5 class="bnt">CADASTRAR ALUNO</h5>
+				<h5 class="bnt">CADASTRAR DE PRODUTO</h5>
 				
 			</div>
 			
 			<div class="wm">
-				<h5 class="bnt">ENCONTRAR ALUNO</h5>
+				<h5 class="bnt">CADASTRO DE FORNECEDOR</h5>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -41,15 +41,15 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">			
-				<h5 class="modal-title">Encontre um aluno</h5>
+				<h5 class="modal-title">Encontre um produto</h5>
 				<button type="button" class="close" data-dismiss="modal">
 					<span>&times;</span>
 				</button>
 				
 			</div>
-			<form method="post" action="pesquisar" th:object="${aluno}" >
+			<form method="post" action="pesquisar"  >
 				<div class="modal-body">
-					<input type="text" th:field="*{nome}" class="form-control">
+					<input type="text"  class="form-control">
 						
 				</div>
 				<div class="modal-footer">
